@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t prodiptasengupta/docker-react -f Dockerfile.dev Dockerfile.dev .
+  - docker build -t prodiptasengupta/docker-react -f Dockerfile.dev 
 
 script:
   - docker run -e CI=true prodiptasengupta/docker-react npm run test -- --coverage
